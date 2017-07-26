@@ -1,0 +1,53 @@
+.color-palette-layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: #ccc;
+  overflow: hidden;
+  @include width-range(650px) {
+    flex-direction: column;
+  }
+
+  h3 {
+    margin: 0 0 50px 0;
+  }
+
+  .color {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 10rem;
+    padding: 1rem;
+    &:hover {
+      flex-basis: 20rem;
+      // flex-grow: 2;
+
+      div {
+        @include opacity(1);
+      }
+    }
+    &:nth-child(1) {
+      background-color: #f7c7e6;
+    }
+    &:nth-child(2) {
+      background-color: #ffe764;
+    }
+    &:nth-child(3) {
+      background-color: #9393ff;
+    }
+    &:nth-child(4) {
+      background-color: #6dff6d;
+    }
+    &:nth-child(5) {
+      background-color: #86e3ff;
+    }
+    @include transition(all .7s ease-in-out);
+    @include box-shadow(0 0 20px 0 #000);
+
+    div {
+      margin: 15px 0;
+      @include transition(all .7s ease-in-out);
+      @include opacity(0);
+      @include font(16);
+    }
+  }
+}

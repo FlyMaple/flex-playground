@@ -1,0 +1,64 @@
+.madness-layout {
+  width: 900px;
+  height: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: auto;
+    width: 10%;
+    margin-right: 15px;
+
+    &:nth-child(2), &:nth-last-child(2) {
+      .madness {
+        padding: 32px 0;
+      }
+    }
+
+    &:nth-child(3), &:nth-last-child(3) {
+      .madness {
+        padding: 98px 0;
+      }
+    }
+
+    &:nth-child(4) {
+      padding-top: 50px;
+      justify-content: center;
+
+      .madness {
+        padding: 0;
+      }
+    }
+
+    .slabel {
+      text-align: center;
+      @include font(12);
+    }
+
+    .madness {
+      text-align: center;
+
+      div {
+        background-color: #fff;
+        margin: 5px 0;
+      }
+    }
+
+    .champ {
+      padding: 65px 0;
+      text-align: center;
+      
+      .icon {
+        display: inline-block;
+      }
+
+      ~ .xxx {
+      }
+    }
+  }
+}

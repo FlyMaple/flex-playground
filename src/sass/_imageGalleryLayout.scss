@@ -1,0 +1,18 @@
+.image-gallery-layout {
+  display: flex;
+  flex-wrap: wrap;
+  padding: .5vw;
+
+  & > div {
+    flex: auto;
+    flex-grow: 0;
+    align-items: flex-start;
+    width: 200px;
+    margin: .5vw;
+
+    & > img {
+      width: 100%;
+      margin-bottom: .5vw;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.card-layout {
+  display: flex;
+  flex-wrap: wrap;
+
+
+  .card {
+    flex: auto;
+    width: 320px;
+    height: 320px;
+    border: 1px solid gray;
+    margin: 15px;
+    padding: 15px;
+
+    
+    &.card-news {
+      display: flex;
+      flex-direction: column;
+      background-color: gold;
+
+      .desc {
+        flex: auto;
+      }
+    }
+
+    &.wide {
+      width: 480px;
+    }
+  }
+}
